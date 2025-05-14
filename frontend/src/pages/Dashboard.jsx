@@ -81,36 +81,6 @@ const Dashboard = () => {
   // ];
 
   return (
-    // <div className="min-h-screen bg-gray-900 text-gray-100 p-8">
-    //   <header className="flex justify-between items-center mb-8">
-    //     <div className="flex items-center space-x-4">
-    //       <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-lg font-semibold">
-    //         DP
-    //       </div>
-    //       <div>
-    //         <p className="font-semibold">Deadpool</p>
-    //         <p className="text-sm text-gray-400">peterparker@marvel.com</p>
-    //       </div>
-    //     </div>
-    //     <div className="space-x-4">
-    //       <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium">Classify</button>
-    //       <button className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-medium">Login/Logout</button>
-    //     </div>
-    //   </header>
-
-    //   <div className="space-y-4">
-    //     {emails.map((email, index) => (
-    //       <div
-    //         key={index}
-    //         className="bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 transition-colors"
-    //       >
-    //         <p className="font-semibold text-lg">{email.sender}</p>
-    //         <p className="text-gray-300 mt-2 text-sm">{email.subject}</p>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
-
 
     <div className="min-h-screen bg-gray-900 text-gray-100 p-8">
       <header className="flex justify-between items-center mb-8">

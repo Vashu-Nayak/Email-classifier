@@ -15,4 +15,4 @@ export const categoryColors = {
 };
 
 export const BASE_URL =
-  location.hostname === "localhost" ? "http://localhost:5000/classify" : "";
+  location.hostname === "localhost" ? "http://localhost:5000/classify" : "https://email-classifier-hcss.onrender.com/classify";
