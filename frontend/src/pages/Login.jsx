@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Login = () => {
     const navigate = useNavigate();
-    const [apiKey, setApiKey] = useState(JSON.parse(localStorage.getItem("geminiApiKey")) || {});
+    const [apiKey, setApiKey] = useState('');
 
     const handleApiKeyChange = (e) => {
         setApiKey(e.target.value);
@@ -27,8 +27,6 @@ const Login = () => {
                     picture: picture,
                     token: tokenResponse.access_token,
                 }
-                console.log(credentials)
-                // localStorage.setItem("googleCredentials", credentials);
                 localStorage.setItem("googleCredentials", JSON.stringify(credentials));
                 localStorage.setItem("geminiApiKey", apiKey);
 
@@ -38,17 +36,13 @@ const Login = () => {
                     },
                 });
 
-                // const data = await response.json();
-                console.log(res1)
-                // setEmails(res1.data.messages);
-                console.log(res1.data.messages);
 
                 const messages = res1.messages || [];
 
                 const emailPromises = messages.map((msg) =>
                     fetch(`https://gmail.googleapis.com/gmail/v1/users/me/messages/${msg.id}`, {
                         headers: {
-                            Authorization: `Bearer ${accessToken}`,
+                            Authorization: `Bearer ${credentials.token}`,
                         },
                     }).then((res) => res.json())
                 );
