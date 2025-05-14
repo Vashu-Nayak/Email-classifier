@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Login = () => {
     const navigate = useNavigate();
-    const [apiKey, setApiKey] = useState("");
+    const [apiKey, setApiKey] = useState(JSON.parse(localStorage.getItem("geminiApiKey")) || {});
 
     const handleApiKeyChange = (e) => {
         setApiKey(e.target.value);

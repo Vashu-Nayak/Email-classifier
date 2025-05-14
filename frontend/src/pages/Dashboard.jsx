@@ -8,8 +8,6 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("googleCredentials")) || {});
   const navigate = useNavigate()
-  // const credentials = JSON.parse(localStorage.getItem("googleCredentials"));
-  // setUser(credentials);
 
   const fetchEmailDetails = async (messageId) => {
     try {
